@@ -30,7 +30,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,500;0,700;1,500&family=Golos+Text:wght@400;500;600&display=swap">
 <link rel="preload" as="image" href="assets/img/hero.webp?v=20261016-3" media="(min-width:761px)" fetchpriority="high">
 <link rel="preload" as="image" href="assets/img/hero-m.webp?v=20261016-3" media="(max-width:760px)" fetchpriority="high">
-<link rel="stylesheet" href="styles.css?v=20261016-3">
+<link rel="stylesheet" href="styles.css?v=20261017-1">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -118,7 +118,9 @@
     <a href="#detox" data-i="m.detox">Детоксикация</a>
     <a href="#dnevnoy" data-i="m.dnevnoy">Дневной стационар</a>
     <a href="#uslugi" data-i="m.uslugi">Все услуги</a>
+    <a href="#klinika" data-i="m.klinika">Палаты и клиника</a>
     <a href="#vrachi" data-i="m.vrachi">Врачи и лицензия</a>
+    <a href="#otzyvy" data-i="m.otzyvy">Отзывы 2GIS</a>
     <a href="#rodnym" data-i="m.rodnym">Помощь родным</a>
     <a href="#zayavka" data-i="m.zayavka">Бесплатная консультация</a>
     <a href="#kontakty" data-i="m.kontakty">Контакты</a>
@@ -178,8 +180,8 @@
         </div>
       </div>
       <div class="ph ph-svc">
-        <picture class="ph-dim"><source media="(max-width:760px)" srcset="assets/img/stacionar-m.webp"><img src="assets/img/stacionar.webp" width="960" height="640" alt="" loading="lazy" decoding="async"></picture>
-        <picture class="ph-clear"><source media="(max-width:760px)" srcset="assets/img/stacionar-m.webp"><img src="assets/img/stacionar.webp" width="960" height="640" alt="Спокойный сон в палате стационара" data-i-alt="st.alt" loading="lazy" decoding="async"></picture>
+        <picture class="ph-dim"><source media="(max-width:760px)" srcset="assets/img/stacionar-m.webp?v=20261017-1"><img src="assets/img/stacionar.webp?v=20261017-1" width="1080" height="1350" alt="" loading="lazy" decoding="async"></picture>
+        <picture class="ph-clear"><source media="(max-width:760px)" srcset="assets/img/stacionar-m.webp?v=20261017-1"><img src="assets/img/stacionar.webp?v=20261017-1" width="1080" height="1350" alt="Палата стационара Hayat Clinic" data-i-alt="st.alt" loading="lazy" decoding="async"></picture>
         <div class="ph-line"><svg viewBox="0 0 100 12" preserveAspectRatio="none"><path d="M0 3 Q50 11 100 3" fill="none" stroke="currentColor" stroke-width="1.2" vector-effect="non-scaling-stroke"/></svg></div>
       </div>
     </div>
@@ -371,6 +373,22 @@
   </div>
 </section>
 
+<!-- КЛИНИКА ИЗНУТРИ -->
+<section class="sec sec-deep" id="klinika">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="kick"><i class="drop"></i><span data-i="kl.kick">Клиника изнутри</span></p>
+      <h2 data-i="kl.h2">Чисто, тихо, по-домашнему</h2>
+      <p class="lead" data-i="kl.lead">Настоящие фото клиники, без стока: холл, кабинет врача, душевая. Палата - выше, в блоке стационара.</p>
+    </div>
+    <div class="klin rv">
+      <figure class="kl kl-wide"><img src="assets/img/kl-holl.webp" width="1068" height="748" alt="Холл клиники Hayat Clinic" data-i-alt="kl.a1" loading="lazy" decoding="async"><figcaption data-i="kl.c1">Холл</figcaption></figure>
+      <figure class="kl"><img src="assets/img/kl-kabinet.webp" width="1078" height="1351" alt="Кабинет врача в Hayat Clinic" data-i-alt="kl.a2" loading="lazy" decoding="async"><figcaption data-i="kl.c2">Кабинет врача</figcaption></figure>
+      <figure class="kl"><img src="assets/img/kl-dush.webp" width="1080" height="1357" alt="Душевая в клинике Hayat Clinic" data-i-alt="kl.a3" loading="lazy" decoding="async"><figcaption data-i="kl.c3">Душевая</figcaption></figure>
+    </div>
+  </div>
+</section>
+
 <!-- ВРАЧИ -->
 <section class="sec sec-paper" id="vrachi">
   <div class="wrap">
@@ -378,7 +396,7 @@
       <div>
         <p class="kick"><i class="drop"></i><span data-i="vr.kick">Врачи</span></p>
         <h2 data-i="vr.h2">Врачи психиатры-наркологи</h2>
-        <p class="lead" data-i="vr.lead">Опыт в психиатрии и наркологии. Бесплатная консультация до начала лечения - с врачом, а не с менеджером.</p>
+        <p class="lead" data-i="vr.lead">Наркологи-психиатры и невропатолог со стажем 17-18 лет. Бесплатная консультация до начала лечения - с врачом, а не с менеджером.</p>
       </div>
       <div class="arrs">
         <button class="arr" type="button" data-for="docs" data-dir="-1" aria-label="Назад" data-i-aria="arr.prev"><svg width="20" height="20" style="transform:scaleX(-1)"><use href="#ic-chev"/></svg></button>
@@ -386,10 +404,43 @@
       </div>
     </div>
     <div class="rail docs rv" id="docs" tabindex="0" aria-label="Врачи клиники" data-i-aria="vr.rail">
-      <figure class="doc"><img src="assets/img/doc-1.webp" width="683" height="1024" alt="Врач психиатр-нарколог Hayat Clinic" data-i-alt="vr.alt" loading="lazy" decoding="async"><figcaption><b data-i="vr.name">Врач психиатр-нарколог</b><span data-i="vr.role">Hayat Clinic, Алматы и Астана</span></figcaption></figure>
-      <figure class="doc"><img src="assets/img/doc-2.webp" width="700" height="933" alt="Врач психиатр-нарколог Hayat Clinic" data-i-alt="vr.alt" loading="lazy" decoding="async"><figcaption><b data-i="vr.name">Врач психиатр-нарколог</b><span data-i="vr.role">Hayat Clinic, Алматы и Астана</span></figcaption></figure>
-      <figure class="doc"><img src="assets/img/doc-3.webp" width="683" height="1024" alt="Врач психиатр-нарколог Hayat Clinic" data-i-alt="vr.alt" loading="lazy" decoding="async"><figcaption><b data-i="vr.name">Врач психиатр-нарколог</b><span data-i="vr.role">Hayat Clinic, Алматы и Астана</span></figcaption></figure>
+      <figure class="doc"><img src="assets/img/doc-4.webp" width="706" height="941" alt="Османова Рузана Вахитжановна, невропатолог, психиатр" loading="lazy" decoding="async"><figcaption><b data-i="vr.n1">Османова Рузана Вахитжановна</b><span data-i="vr.r1">Невропатолог, психиатр</span><span class="doc-exp" data-i="vr.e18">Стаж 18 лет</span></figcaption></figure>
+      <figure class="doc"><img src="assets/img/doc-3.webp" width="683" height="1024" alt="Исанов Даулет Серикказыевич, нарколог, психиатр" loading="lazy" decoding="async"><figcaption><b data-i="vr.n2">Исанов Даулет Серикказыевич</b><span data-i="vr.r2">Нарколог, психиатр</span><span class="doc-exp" data-i="vr.e17">Стаж 17 лет</span></figcaption></figure>
+      <figure class="doc"><img src="assets/img/doc-1.webp" width="683" height="1024" alt="Срымов Сабит Калдыбаевич, нарколог, психиатр" loading="lazy" decoding="async"><figcaption><b data-i="vr.n3">Срымов Сабит Калдыбаевич</b><span data-i="vr.r2">Нарколог, психиатр</span><span class="doc-exp" data-i="vr.e17">Стаж 17 лет</span></figcaption></figure>
+      <figure class="doc"><img src="assets/img/doc-2.webp" width="700" height="933" alt="Срымов Таймас Дильдабекович, нарколог, психиатр" loading="lazy" decoding="async"><figcaption><b data-i="vr.n4">Срымов Таймас Дильдабекович</b><span data-i="vr.r2">Нарколог, психиатр</span><span class="doc-exp" data-i="vr.e17">Стаж 17 лет</span></figcaption></figure>
     </div>
+  </div>
+</section>
+
+<!-- ОТЗЫВЫ 2GIS -->
+<section class="sec sec-sand" id="otzyvy">
+  <div class="wrap">
+    <div class="head head-arr rv">
+      <div>
+        <p class="kick"><i class="drop"></i><span data-i="ot.kick">Отзывы</span></p>
+        <h2 data-i="ot.h2">Что пишут о нас в 2GIS</h2>
+        <div class="gis">
+          <a class="gis-b" href="https://2gis.kz/astana/geo/70000001092009899/tab/reviews" target="_blank" rel="noopener"><b>4,9</b><span class="rev-st" aria-hidden="true">★</span><span><span data-i="ko.c1">Астана</span> · <span data-i="ot.n57">57 отзывов</span></span></a>
+          <a class="gis-b" href="https://2gis.kz/almaty/geo/70000001039193359/tab/reviews" target="_blank" rel="noopener"><b>4,4</b><span class="rev-st" aria-hidden="true">★</span><span><span data-i="ko.c2">Алматы</span> · <span data-i="ot.n23">23 отзыва</span></span></a>
+        </div>
+      </div>
+      <div class="arrs">
+        <button class="arr" type="button" data-for="revs" data-dir="-1" aria-label="Назад" data-i-aria="arr.prev"><svg width="20" height="20" style="transform:scaleX(-1)"><use href="#ic-chev"/></svg></button>
+        <button class="arr" type="button" data-for="revs" data-dir="1" aria-label="Вперёд" data-i-aria="arr.next"><svg width="20" height="20"><use href="#ic-chev"/></svg></button>
+      </div>
+    </div>
+    <div class="rail revs rv" id="revs" tabindex="0" aria-label="Отзывы пациентов и родных из 2GIS" data-i-aria="ot.rail">
+      <figure class="rev"><span class="rev-st" aria-label="5 из 5" data-i-aria="ot.5">★★★★★</span><blockquote>Хочу выразить огромную благодарность Таймасу Дильдабековичу и всему персоналу. Помогли, всё объяснили и вернули к жизни, можно сказать. Клиника чистая, есть все условия. Персонал внимательный и вежливый.</blockquote><figcaption><b>Ирина Х.</b><span><span data-i="ko.c2">Алматы</span> · 21.07.2026 · 2GIS</span></figcaption></figure>
+      <figure class="rev"><span class="rev-st" aria-label="5 из 5" data-i-aria="ot.5">★★★★★</span><blockquote>Обратились в центр, когда у брата уже не было сил и желания бороться самому. Здесь не просто вытащили его из запоя, но и дали понять, что он может справиться. Нам, родственникам, тоже объяснили, как вести себя и как помочь.</blockquote><figcaption><b>Даулетхан Н.</b><span><span data-i="ko.c1">Астана</span> · 22.06.2025 · 2GIS</span></figcaption></figure>
+      <figure class="rev"><span class="rev-st" aria-label="5 из 5" data-i-aria="ot.5">★★★★★</span><blockquote>Сам сюда пришёл, когда понял, что всё катится вниз. Ни одной осуждающей фразы, только поддержка и дело. Спасибо врачам, медсёстрам, психологам: здесь работают люди, которые действительно заботятся о пациентах.</blockquote><figcaption><b>Елдес С.</b><span><span data-i="ko.c1">Астана</span> · 23.06.2025 · 2GIS</span></figcaption></figure>
+      <figure class="rev"><span class="rev-st" aria-label="5 из 5" data-i-aria="ot.5">★★★★★</span><blockquote>Настоящие профессионалы своего дела! Большое спасибо врачам Даулету, Таймасу, Абдикадиру Нагашбаевичу. Привезли брата после месячного запоя с судорогами, поставили на ноги за 5 дней и дальше порекомендовали реабилитацию.</blockquote><figcaption><b>Nursultan Sh.</b><span><span data-i="ko.c1">Астана</span> · 28.03.2025 · 2GIS</span></figcaption></figure>
+      <figure class="rev"><span class="rev-st" aria-label="5 из 5" data-i-aria="ot.5">★★★★★</span><blockquote>Водили на лечение от алкоголизма сестру, всё прошло в хороших условиях, врачи компетентны, работали психологи. Чистые, комфортные палаты, современная медицина. Спасибо за своевременно оказанную помощь.</blockquote><figcaption><b>Бахтияр А.</b><span><span data-i="ko.c1">Астана</span> · 29.06.2025 · 2GIS</span></figcaption></figure>
+      <figure class="rev"><span class="rev-st" aria-label="5 из 5" data-i-aria="ot.5">★★★★★</span><blockquote>Сам психолог. Лечился от лекарственной зависимости. Главврач назначил очень грамотное лечение. Вышел свободным человеком, вновь ощущаю жизнь. Спасибо Таймасу Дильдабековичу и всему очень заботливому персоналу.</blockquote><figcaption><b>Нурлан А.</b><span><span data-i="ko.c2">Алматы</span> · 06.12.2023 · 2GIS</span></figcaption></figure>
+      <figure class="rev"><span class="rev-st" aria-label="5 из 5" data-i-aria="ot.5">★★★★★</span><blockquote>Обращалась за помощью для отца. С первых дней стало ясно, что здесь работают неравнодушные люди. Сейчас папа на реабилитации, и мы впервые за долгое время чувствуем надежду.</blockquote><figcaption><b>Майра А.</b><span><span data-i="ko.c1">Астана</span> · 26.06.2025 · 2GIS</span></figcaption></figure>
+      <figure class="rev"><span class="rev-st" aria-label="5 из 5" data-i-aria="ot.5">★★★★★</span><blockquote>После 4-дневного запоя было тяжёлое похмелье. Приехали на капельницу, потому что самостоятельно из такого не выйдешь. В клинике всё чисто, аккуратно, приветливый персонал. Врач всё рассказал, объяснил, что капают и зачем.</blockquote><figcaption><b>Пациент из 2GIS</b><span><span data-i="ko.c2">Алматы</span> · 09.12.2021 · 2GIS</span></figcaption></figure>
+      <figure class="rev"><span class="rev-st" aria-label="5 из 5" data-i-aria="ot.5">★★★★★</span><blockquote>Условия хорошие, палата чистая, персонал отзывчивый. Но главное - это отношение. Я прошёл через многое, но именно здесь почувствовал, что могу изменить свою жизнь.</blockquote><figcaption><b>Алпамыс К.</b><span><span data-i="ko.c1">Астана</span> · 02.06.2025 · 2GIS</span></figcaption></figure>
+    </div>
+    <p class="rev-note" data-i="ot.note">Отзывы приведены из 2GIS с сокращениями, имена - по первой букве фамилии.</p>
   </div>
 </section>
 
@@ -575,6 +626,6 @@
   <p class="vm-count" id="vm-count"></p>
 </div>
 
-<script src="script.js?v=20261016-3"></script>
+<script src="script.js?v=20261017-1"></script>
 </body>
 </html>

@@ -307,11 +307,31 @@ html:not(.js) .ph { --lv: 1; }
 .rail { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding-bottom: 4px; }
 .rail::-webkit-scrollbar { display: none; }
 .rail > * { scroll-snap-align: start; flex: 0 0 auto; }
-.doc { width: calc((100% - 32px) / 3); border-radius: var(--r-card); overflow: hidden; background: #2b2f31; position: relative; }
+.doc { width: calc((100% - 48px) / 4); border-radius: var(--r-card); overflow: hidden; background: #2b2f31; position: relative; }
 .doc img { aspect-ratio: 3 / 4; height: auto; object-fit: cover; object-position: 50% 15%; }
 .doc figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 48px 20px 18px; background: linear-gradient(180deg, transparent, rgba(10, 25, 24, .85)); color: #fff; display: flex; flex-direction: column; gap: 2px; }
 .doc b { font-family: var(--fd); font-weight: 500; font-size: 20px; }
 .doc span { font-size: 13px; opacity: .8; }
+.doc b { line-height: 1.15; }
+.doc .doc-exp { margin-top: 6px; align-self: flex-start; font-size: 12px; opacity: 1; padding: 3px 9px; border-radius: 999px; background: rgba(143, 209, 195, .22); color: #CFEDE6; }
+
+/* ---------- клиника изнутри ---------- */
+.klin { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr) minmax(0, 1fr); gap: 16px; }
+.kl { position: relative; border-radius: var(--r-card); overflow: hidden; height: clamp(320px, 38vw, 520px); }
+.kl img { width: 100%; height: 100%; object-fit: cover; }
+.kl figcaption { position: absolute; left: 14px; bottom: 14px; padding: 6px 12px; border-radius: 999px; background: rgba(10, 25, 24, .72); color: #F4EFE7; font-size: 14px; }
+
+/* ---------- отзывы 2GIS ---------- */
+.gis { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.gis-b { display: inline-flex; align-items: center; gap: 8px; padding: 9px 16px; border-radius: 999px; background: #fff; border: 1px solid var(--line); color: var(--ink); text-decoration: none; font-size: 14px; transition: border-color .2s; }
+.gis-b b { font-family: var(--fd); font-size: 20px; font-weight: 600; }
+.gis-b:hover { border-color: var(--teal); }
+.rev-st { color: #E8A93A; letter-spacing: 2px; font-size: 15px; }
+.rev { width: calc((100% - 32px) / 3); margin: 0; padding: 26px 24px 22px; border-radius: var(--r-card); background: #fff; display: flex; flex-direction: column; gap: 14px; }
+.rev blockquote { margin: 0; font-size: 16px; line-height: 1.55; flex: 1 1 auto; }
+.rev figcaption { display: flex; flex-direction: column; gap: 2px; font-size: 13px; color: var(--fg-2, #5b6566); }
+.rev figcaption b { font-size: 15px; color: var(--ink); }
+.rev-note { margin: 16px 0 0; font-size: 13px; opacity: .7; }
 
 /* лицензия */
 .lic-in { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: clamp(28px, 5vw, 72px); align-items: center; }
@@ -411,6 +431,7 @@ html[lang="kk"] .h1 .l1 { font-size: var(--fs, clamp(40px, 6.4vw, 96px)); }
   .branches { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .branch-cta { grid-column: span 2; }
   .doc { width: calc((100% - 16px) / 2); }
+  .rev { width: calc((100% - 16px) / 2); }
 }
 
 /* ---------- телефон ---------- */
@@ -449,6 +470,10 @@ html[lang="kk"] .h1 .l1 { font-size: var(--fs, clamp(40px, 6.4vw, 96px)); }
   .lic-in { grid-template-columns: minmax(0, 1fr); }
   .lic { transform: none; max-width: 420px; }
   .doc { width: 76%; }
+  .rev { width: 86%; }
+  .klin { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px; }
+  .kl { height: auto; aspect-ratio: 4 / 5; }
+  .kl-wide { grid-column: span 2; aspect-ratio: 3 / 2; }
   .fields { grid-template-columns: minmax(0, 1fr); }
   .branches { grid-template-columns: minmax(0, 1fr); }
   .branch-cta { grid-column: auto; }
@@ -460,4 +485,4 @@ html[lang="kk"] .h1 .l1 { font-size: var(--fs, clamp(40px, 6.4vw, 96px)); }
   .hero-in { margin-top: 34svh; }
 }
 
-#stacionar .ph-dim img { object-position: 92% 50%; }
+#stacionar .ph img { object-position: 70% 60%; }
