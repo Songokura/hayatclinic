@@ -14,7 +14,7 @@
   var VW = W.innerWidth, VH = W.innerHeight;
 
   /* ---------- Телефон и WhatsApp - одна константа ---------- */
-  var PHONE = "77078012828";
+  var PHONE = "77760433987";
   var WA = {
     ru: {
       "default": "Здравствуйте! Пишу с сайта Hayat Clinic. Нужна консультация нарколога.",
@@ -295,7 +295,7 @@
     "meta.desc": "Hayat Clinic, addiction treatment: binge withdrawal, doctor home visits, inpatient ward, day clinic, drug detox, alcohol aversion therapy. Astana and Almaty, 24/7, confidential, licensed. Free online consultation.",
     "skip": "To services", "brand.aria": "Hayat Clinic - home", "nav.aria": "Site sections",
     "nav.uslugi": "Services", "nav.vyezd": "Home visits", "nav.stacionar": "Inpatient", "nav.vrachi": "Doctors", "nav.rodnym": "For family", "nav.kontakty": "Contacts",
-    "tel.aria": "Call +7 707 801 28 28", "hdr.cta": "Free consultation", "lang.aria": "Site language", "menu.aria": "Menu", "menu.nav": "Mobile menu",
+    "tel.aria": "Call +7 776 043 39 87", "hdr.cta": "Free consultation", "lang.aria": "Site language", "menu.aria": "Menu", "menu.nav": "Mobile menu",
     "m.stacionar": "Inpatient treatment", "m.vyezd": "Doctor home visit", "m.zapoy": "Binge withdrawal", "m.detox": "Detox", "m.dnevnoy": "Day clinic", "m.uslugi": "All services", "m.klinika": "Wards and clinic", "m.vrachi": "Doctors and licence", "m.otzyvy": "2GIS reviews", "m.rodnym": "Help for family", "m.zayavka": "Free consultation", "m.kontakty": "Contacts",
     "cta.wa": "Message on WhatsApp", "cta.price": "Ask the price", "cta.free": "Free consultation", "cta.ask": "Ask a question",
     "hero.kick": "Astana · Almaty · around the clock", "hero.h1a": "Binge withdrawal,", "hero.h1b": "doctor home visits and inpatient care",
