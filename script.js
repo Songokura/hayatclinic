@@ -60,6 +60,20 @@
     a.setAttribute("href", "https://wa.me/" + PHONE + "?text=" + encodeURIComponent(text));
   }, true);
 
+  /* ---------- Конверсии Google Ads: звонок, WhatsApp и email, форма (в обработчике submit) ---------- */
+  function fireConv(key) {
+    if (typeof W.gtag_report_conversion !== "function" || !W.AW_CONV) return;
+    var sendTo = W.AW_CONV[key];
+    if (sendTo) W.gtag_report_conversion(undefined, sendTo);
+  }
+  /* tel: открывает набор номера, wa.me и mailto - приложение или соседнюю вкладку: страница
+     не выгружается, поэтому переход не перехватываем, а просто отправляем конверсию. */
+  W.addEventListener("click", function (e) {
+    var a = e.target && e.target.closest ? e.target.closest('a[href^="tel:"], a[href*="wa.me"], a[href^="mailto:"]') : null;
+    if (!a) return;
+    fireConv(a.getAttribute("href").indexOf("tel:") === 0 ? "phone" : "contact");
+  }, true);
+
   /* ---------- fitText для первой строки героя (только десктоп, на мобиле строка переносится) ---------- */
   var h1 = doc.getElementById("h1");
   function fitText() {
@@ -440,6 +454,7 @@
       if (name) lines.push(L.name + ": " + name);
       lines.push(L.phone + ": " + phone);
       var url = "https://wa.me/" + PHONE + "?text=" + encodeURIComponent(lines.join("\n"));
+      fireConv("form");
       W.open(url, "_blank", "noopener");
       if (thanks) { thanks.hidden = false; try { thanks.focus({ preventScroll: true }); } catch (err) {} }
       form.reset();
