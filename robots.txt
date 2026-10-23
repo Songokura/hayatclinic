@@ -9,4 +9,4 @@ Allow: /
 Disallow: /assets/lang/
 Disallow: /*lang=kk
 
-Sitemap: https://hayat.med-home.kz/sitemap.xml
+Sitemap: https://hayat-med.kz/sitemap.xml
